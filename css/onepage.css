@@ -1,0 +1,960 @@
+@import url(common.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+
+
+
+/*_____________________layout*/
+
+.sr-only {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+
+/* top button */
+.top_btn {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 999;
+}
+.top_btn #active{
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border:2px solid #005098;
+    background: #ffae00;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    transition: all 0.2s;
+}
+.top_btn:hover a#active {
+    background: #005098;
+    color: #ffae00;
+    font-weight: 800;
+}
+
+
+/*main 제목 오른쪽 테두리*/
+h2 { 
+    position: relative;
+}
+h2::before, h2::after { 
+    content: '';
+    display: block;
+    width: 4px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #005098;
+}
+h2::before {left: 460px;}
+h2::after {right: 460px;}
+
+
+ /*main 제목과 텍스트 */
+.Title_txt h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+.Title_txt p {
+    margin: 20px 0 50px 0;
+    line-height: 1.6;
+    font-weight: 300;
+    color: #000;
+}
+
+
+/*더보기 버튼*/
+.more { 
+    margin: 50px auto 0;
+    width: 200px;
+    height: 40px;
+    line-height: 35px;
+    border: 2px solid #005098;
+}
+.more a {
+    display: block; 
+    width: 100%;
+    height: 100%;
+    color: #005098;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    transition: all 0.2s;
+}
+.more:hover a {
+    color: #fff;
+    background: #005098;
+}
+
+
+
+
+
+
+#wrap {
+    width: 100%;
+    text-align: center;
+}
+
+
+/*____________________________haeder*/
+
+header {
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    border-bottom: 2px solid #005098;
+    box-shadow: 0px 2px 5px #ddd;
+}
+.menu_top {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/*로고*/
+.logo_left{
+    float: left;
+    margin: 20px 0 0 0;
+}
+
+
+
+/*상단메뉴 오른쪽*/
+
+.util_menu {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+}
+.util_menu li{
+    float: left;
+    margin: 10px 0 0 0;
+}
+.util_menu li a{
+    display: block;
+    padding: 0 10px;
+    border-right: 1px solid #ccc;
+    line-height: 10px;
+    color: #666;
+}
+.util_menu li:nth-of-type(3) a {
+    border: 0;
+}
+
+nav {
+    float: right;
+    margin: 40px 0 0 0;
+}
+nav li {
+    width: 150px;
+    height: 58px;
+    float: left;
+}
+nav li:hover {
+    border-bottom: 3px solid #005098;
+}
+nav li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    font-family: 'Do Hyeon', sans-serif;
+    line-height: 58px;
+}
+nav li:hover a{
+    color: #005098;
+}
+
+
+
+
+/*____________________________visual*/
+
+.visual {
+    width: 100%;
+    height: 680px;
+    background: url(../image/main_visual.jpg) no-repeat center center;
+    background-size: cover;
+}
+.visual_in {
+    background: #ddd;
+    width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+}
+.visual_txt {
+    position: absolute;
+    top: 250px;
+    left: 0;
+    color: #fff; 
+}
+.visual_txt strong {
+    font-size: 60px;
+    line-height: 1.1;
+    letter-spacing: 4px;
+    font-family: 'Do Hyeon', sans-serif;
+}
+.visual_txt strong .house {
+    background: #005098;
+    color: #ffae00;
+}
+.visual_txt .visual_txt_bar{
+    padding: 0 0 0 30px;
+    border-left: 5px solid  #ffae00;
+}
+.visual_txt .visual_txt_bar>p {
+    margin: 5px 0 0 0;
+    letter-spacing: 2px;
+    color: #005098;
+    font-weight: bold;
+}
+.visual_txt>span {
+    display: block;
+    margin: 30px 0 0 35px;
+    line-height: 1.5;
+    font-size: 13px;
+}
+
+/*비쥬얼_하단_화면전환_동그라미*/
+.Screen_change span{
+    display: block;
+    position: absolute;
+    top: 520px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #999;
+    cursor: pointer;
+}
+
+.Screen_change span:hover {
+    background: #ffae00;
+    opacity: 1;
+}
+.Screen_change .change1{
+    left: 48%;
+    background: #ffae00;
+}
+.Screen_change .change2{
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.5;
+}
+.Screen_change .change3{
+    left: 51%;
+    opacity: 0.5;
+}
+
+
+
+
+
+
+/*____________________________main*/
+
+
+/*   ///  상단 메뉴  ///    */
+aside {
+    position: relative;
+    color: #fff;
+    width: 1100px;
+    margin: 0 auto;
+    height: 90px;
+}
+.basic_menu {
+    position: absolute;
+    top: -130px;
+    left: 7.4%;
+}
+.basic_menu li {
+    float: left;
+    width: 220px;
+    height: 220px;
+    margin-right: 20px;
+}
+.basic_menu li:last-child {
+    margin-right:0;
+}
+.basic_menu li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 4px solid #005098;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.4);
+    background: #fff;
+    padding: 70px 0 0 0;
+    transition: all 0.5s;
+}
+.basic_menu li h3 {
+    font-size: 28px;
+    margin: 0 0 2px 0;
+    color: #005098;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+.basic_menu li .basic_txt {
+    opacity: 0.7;
+    font-size: 13px;
+    color: #005098;
+    transition: all 0.5s;
+}
+.basic_menu li .basic_bar {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #005098;
+    margin: 15px auto;
+    transition: all 0.5s;
+}
+.basic_menu li p {
+    font-size: 13px;
+    line-height: 1.4;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+
+/* hover 효과 */
+
+.basic_menu li:hover a{
+    transform: translateY(-10px);
+    background: #005098;
+    padding: 45px 0 0 0;
+}
+.basic_menu li:hover h3, 
+.basic_menu li:hover span {
+    color: #ffae00;
+}
+.basic_menu li:hover p {
+    opacity: 1;
+}
+.basic_menu li:hover .basic_bar{
+    background: #ffae00;
+    width: 200px;
+}
+
+
+
+
+
+
+
+/*    ///  해비타트 소개  ///    */
+.about {
+    width: 1100px;
+    margin: 0 auto;
+    padding: 95px 0 110px 0;
+}
+.Topic li {
+    float: left;
+    width: 250px;
+    height: 250px;
+    margin: 0 12px;
+    background:  #005098;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s;
+}
+.Topic li .Topic_icon {
+    margin: 50px 0 0 0;
+    opacity: 1;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 1s;
+    color: #ffae00;
+}
+.Topic li .Topic_icon span { /*icon*/
+    font-size: 60px;
+}
+.Topic li .Topic_icon > p{
+    font-size: 38px;
+    margin: 10px 0 0 0;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+/*  about_hover 문구  */
+.Topic li .Topic_txt {
+    opacity: 0;
+    width: 100%;
+    height: 250px;
+    padding: 35px 0 0 0;
+    font-weight: bold;
+    position: absolute;
+    bottom: -350px;
+    right: 0;
+    transition: all 1s;
+}
+.Topic li .Topic_txt strong {
+    display: inline-block;
+    height: 70px;
+    font-size: 20px;
+    color: #28cacc;
+    border-bottom: 3px solid #28cacc;
+}
+.Topic li .Topic_txt p {
+    width: 100%;
+    margin: 20px 0 0 0;
+    line-height: 1.7;
+    color: #fff;
+}
+
+
+/*  about_hover_효과 */
+.Topic li:hover {
+    background: #1c3245;
+    box-shadow: 0px 5px 10px #999;
+}
+.Topic li:hover .Topic_icon {
+    opacity: 0;
+    top: -350px;
+}
+.Topic li:hover .Topic_txt {
+    opacity: 1;
+    bottom: 0;
+}
+
+
+
+
+
+
+/*     ///  캠페인  ///    */
+
+.campaign { /*100% 배경*/
+    width: 100%;
+    background: #edfbfb;
+    padding: 95px 0 110px 0;
+}
+.campaign_in {
+    width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+.campaign_img {
+    width: 950px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/*  campaign_arrow_icon  */
+
+.campaign_img span {
+    display: block;
+    position: absolute;
+    top: 280px;
+    font-size: 40px;
+    cursor: pointer;
+}
+.campaign_img span:hover {
+    color: #ffae00;
+}
+.campaign_img span.left_arrow {left: -50px;}
+.campaign_img span.right_arrow {right: -60px;}
+
+
+/*  campaign_image  */
+
+.campaign_img a {
+    display: inline-block;
+    overflow: hidden;
+}
+.campaign_img img {
+    width: 100%;
+    transition: all 0.5s;
+}
+.campaign_img .campa_img1 {
+    width: 100%;
+    height: 420px;
+}
+.campaign_img .campa_img2, .campaign .campa_img3 {
+    width: 49.7%;
+    height: 200px;
+    overflow: hidden;
+}
+.campaign_img img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+/*    /// 후원하기 ///    */
+
+.support {
+    width: 1100px;
+    margin: 0 auto;
+    padding: 95px 0 110px 0;
+}
+.sponsor {
+    width: 100%;
+    font-family: 'Do Hyeon', sans-serif;
+}
+.sponsor li {
+    float: left;
+    width: 33.3%;
+    height: 500px;
+    background: #ddd;
+    overflow: hidden;
+    position: relative;
+}
+.sponsor li::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: #ffae00;
+    z-index: 100;
+    transition: all 0.5s;
+    opacity: 0;
+}
+.sponsor img {
+    height: 500px;
+    transform: translateX(-200px);
+    -webkit-filter: brightness(50%);
+    filter: brightness(50%);
+    transition: all 0.5s;
+}
+.sponsor strong {
+    display: inline-block;
+    width: 100%;
+    font-size: 60px;
+    color: #fff;
+    position: absolute; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.5s;
+}
+.sponsor strong span {
+    color: #ffae00;
+}
+
+
+/*  support_hover 문구  */
+.sponsor div{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: all 0.5s;
+}
+.sponsor div p {
+    font-size: 40px;
+    color: #fff;
+    padding: 8px 0;
+}
+.sponsor div p:last-child {
+    border:none;
+}
+.sponsor div span {
+    display: inline-block;
+    width: 30px;
+    height: 5px;
+    background: #ffae00;
+    text-align: center;
+}
+
+
+/*    support_hover_효과     */
+.sponsor li:hover img {
+    -webkit-filter: grayscale(100%) brightness(40%);
+    filter: grayscale(100%) brightness(40%);
+}
+.sponsor li:hover div {
+    opacity: 1;
+}
+.sponsor li:hover strong {
+    opacity: 0;
+    top: 1000px;
+}
+.sponsor li:hover:after {
+    height: 100%;
+    opacity: 1;
+}
+
+
+
+
+
+
+/*   /// 봉사활동 ///   */
+
+.volunteer {
+    padding: 95px 0 0 0;
+}
+.volunteer .Title_txt {
+    width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+.vol_content {
+    width: 100%;
+    height: 600px;
+    background: url(../image/volunteer_bg_img.jpg) no-repeat top right;
+    background-size: cover;
+}
+.vol_content_in {
+    width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+.vol_content_in > div {
+    width: 50%;
+    height: 500px;
+    margin: 50px 0 0 0;
+}
+
+
+/*   left_service   */
+.service {
+    float: left;
+}
+.service li {
+    height: 126.6px;
+    width: 93%;
+    background: rgba(0,80,152,0.8);
+    margin: 30px 0;
+    transition: all 0.7s;
+}
+.service li:hover {
+    background: #002d56;
+}
+.service li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 23.3px 40px;
+}
+.service li a .cop_icon {
+    float: left;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.service li a img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1.03);
+}
+.service li a .icon_txt {
+    float: left;
+    padding: 13px 0 0 20px;
+    color: #fff;
+}
+.service li a .icon_txt p {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 0 5px 0;
+}
+.service li a .icon_txt span {
+    font-size: 13px;
+}
+
+
+/*   right_form   */
+.Sub_Form {
+    float: right;
+}
+.Sub_Form fieldset {
+    width: 93%;
+    height: 440px;
+    margin: 30px 0 30px auto;
+    background: #fff;;
+    border: none;
+    padding: 46px 0 20px;
+    position: relative;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+    transition: all 0.6s;
+}
+.Sub_Form fieldset:hover {
+    transform: translateY(-10px);
+}
+.Sub_Form fieldset::before {
+    content: '*필수입력';
+    font-size: 12px;
+    position: absolute;
+    right: 64px;
+    top: 23px;
+    color: #333;
+}
+fieldset li {
+    width: 400px;
+    height: 45px;
+    margin: 0px auto 20px;
+}
+fieldset li:last-child {
+    margin: 0 auto;
+}
+fieldset li>input {
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    border: 0;
+    border-radius: 7px;
+    padding: 0 0 0 8px;
+}
+fieldset .agree {
+    width: 300px;
+    position: relative;
+    display: inline-block;
+    padding: 10px 0 0 5px ;
+}
+fieldset .agree input {
+    width: 16px;
+    height: 16px;
+    margin: 0 0 4px 0;
+}
+fieldset .agree label {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+fieldset .agree:hover input {
+    border: 1px solid #000;
+}
+fieldset p a {
+    display: inline-block;
+    margin: 7px 0 0 0;
+    letter-spacing: -2px;
+    opacity: 0.7;
+    color: #3f7f30;
+    text-decoration: underline;
+}
+fieldset p a:hover {
+    opacity: 1;
+}
+
+
+/*   volunteer_button   */
+.vol_btn {
+    width: 400px;
+    height: 45px;
+    margin: 30px 0 0 0;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 7px;
+    font-size: 15px;
+    border-radius: 7px;
+    background: #70bd5e;
+    border: none;
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.vol_btn:before, .vol_btn:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #70bd5e;
+}
+.vol_btn:after {
+    top: inherit;
+    left: inherit;
+    bottom: 0;
+    right: 0;
+}
+
+.vol_btn:hover {
+    background: #fff;
+    color: #70bd5e;
+}
+.vol_btn:hover:before, .vol_btn:hover:after {
+    width: 100%;
+    transition: all 0.7s;
+}
+
+
+
+
+
+
+
+
+/*   ///  후원기업 슬라이드 ///   */
+
+.Corporation {
+    width: 1100px;
+    margin: 100px auto 0;
+}
+.slide {
+    width: 100%;
+    height: 55px;
+    overflow: hidden;
+}
+.slide ul {
+    position: relative;
+    height: 255px;
+    width: 100%;
+    animation: Cor 10s infinite alternate;
+}
+.slide ul li {
+    position: absolute;
+    left: 175px;
+    height: 55px;
+}
+.slide ul li:nth-of-type(1){top: 0;}
+.slide ul li:nth-of-type(2){top: 55px;}
+.slide ul li:nth-of-type(3){top: 110px;}
+.slide ul li:nth-of-type(4){top: 165px;}
+
+.slide ul li a {
+    display: inline-block;
+    width: 150px;
+    height: 55px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.slide ul li a:hover {
+    -webkit-filter: none;
+    filter: none;
+}
+.slide ul li a img {
+    width: 100%;
+}
+@keyframes Cor {
+    0% {transform: translateY(0);}
+    10% {transform: translateY(0);}
+    25% {transform: translateY(-55px);}
+    35% {transform: translateY(-55px);}
+    50% {transform: translateY(-110px);}
+    60% {transform: translateY(-110px);}
+    75% {transform: translateY(-165px);}
+    85% {transform: translateY(-165px);}
+    100% {transform: translateY(-220px);}
+}
+
+
+/* 후원기업 더보기  */
+.Corporation > a {
+    display: inline-block;
+    margin: 10px 0 0 0; 
+    font-size: 16px;
+    font-weight: 700;
+}
+.Corporation > a span {
+    display: inline-block;
+    line-height: 24px;
+}
+.Corporation > a img {
+    width: 24px;
+    height: 24px;
+    vertical-align: top;
+}
+
+
+
+
+
+/*____________________________footer*/
+
+footer {
+    margin: 50px 0 0 0;
+    background: #666;
+    color: rgba(255,255,255,0.6);
+}
+
+
+/*  footer_menu  */
+.footer_menu {
+    background: #333;
+}
+.footer_menu ul {
+    width: 1100px;
+    margin: 0 auto;
+}
+.footer_menu ul li {
+    float: left;
+}
+.footer_menu ul li a {
+    display: block;
+    padding: 13px 15px;
+}
+
+
+
+
+/*  footer_wrap  */
+.footer_wrap {
+    width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0 40px;
+}
+.sns dd a{
+    display: inline-block;
+    margin: 0 15px 0 0 ;
+}
+.sns dd a:last-child{
+    margin: 0;
+}
+
+.footer_wrap .title {
+    margin: 20px 0 0 0;
+}
+.footer_wrap .title h3 {
+    font-size: 30px;
+}
+.footer_wrap .title p {
+    font-size: 13px;
+}
+
+/* 전화 팩스 이메일 */
+.contact {
+    margin: 10px 0 10px; 
+    font-size: 17px;
+}
+.contact dt, .contact dd {
+    display: inline-block;
+}
+.contact dd {
+    color: #eee;
+    margin-right: 20px;
+}
+.contact dd:last-child {
+    margin: 0;
+}
+
+
+address {
+    font-style: normal;
+}
+.copyright {
+    margin: 10px 0 0 0;
+}
+
